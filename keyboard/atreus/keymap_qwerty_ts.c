@@ -9,14 +9,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          KC_SPC, KC_FN0, KC_FN5, KC_QUOT, KC_ENT),                     \
 
   /* 1: punctuation and fn keys -- momentarily toggled with FN0 */
-  KEYMAP(SHIFT(KC_8), SHIFT(KC_1), SHIFT(KC_LBRC), SHIFT(KC_RBRC), SHIFT(KC_2), \
+  KEYMAP(SHIFT(KC_EQUAL), SHIFT(KC_1), SHIFT(KC_LBRC), SHIFT(KC_RBRC), SHIFT(KC_2), \
          SHIFT(KC_BSLS), KC_F1, KC_F2, KC_F3, KC_F4,       \
-         SHIFT(KC_EQUAL), SHIFT(KC_3), SHIFT(KC_9), SHIFT(KC_0), SHIFT(KC_4), \
-         KC_KC_GRAVE, KC_F5, KC_F6, KC_F7, KC_F8,       \
+         SHIFT(KC_8), SHIFT(KC_3), SHIFT(KC_9), SHIFT(KC_0), SHIFT(KC_4), \
+         KC_GRAVE, KC_F5, KC_F6, KC_F7, KC_F8,       \
          KC_EQUAL, SHIFT(KC_5), KC_LBRC, KC_RBRC, SHIFT(KC_6), \
          SHIFT(KC_7), KC_F9, KC_F10, KC_F11, KC_F12,       \
          KC_PGDN, KC_PGUP, KC_FN2, KC_FN1, KC_BSPC, KC_FN3, KC_FN4,     \
-         KC_SPC, KC_FN0, KC_FN5, SHIFT(KC_GRAVE), BSLS),                     \
+         KC_SPC, KC_FN0, KC_FN5, SHIFT(KC_GRAVE), KC_BSLS),                     \
          
 
   /* 2: numbers and arrows/movement -- "sticky toggled" with FN1 */
@@ -31,11 +31,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 const uint16_t PROGMEM fn_actions[] = {
   [0] = ACTION_LAYER_MOMENTARY(1),  // momentary to Fn1 overlay
   [1] = ACTION_LAYER_TOGGLE(2),     // toggle for Fn2 overlay
-  [2] = ACTION_MODS_TAP(MOD_LGUI, KC_TAB),
+  [2] = ACTION_MODS_TAP_KEY(MOD_LGUI, KC_TAB),
   [3] = ACTION_MODS_ONESHOT(MOD_LSFT),
-  [4] = ACTION_MODS_TAP(MOD_LCTL, KC_ESC),
-  [5] = ACTION_MODS_TAP(MOD_LALT, KC_MINS),
-  [6] = ACTION_MODS_TAP(MOD_LGUI, KC_DOT ),
+  [4] = ACTION_MODS_TAP_KEY(MOD_LCTL, KC_ESC),
+  [5] = ACTION_MODS_TAP_KEY(MOD_LALT, KC_MINS),
+  [6] = ACTION_MODS_TAP_KEY(MOD_LGUI, KC_DOT ),
   [7] = ACTION_FUNCTION(BOOTLOADER)
 };
 
