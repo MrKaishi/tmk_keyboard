@@ -19,10 +19,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          KC_SPC, KC_FN0, KC_FN2, KC_QUOT, KC_ENT),                     \
          
 
-  /* 2: numbers and arrows/movement -- "sticky toggled" with FN1 */
+  /* 2: numbers and arrows/movement -- FN1 & FN2 */
   KEYMAP(SHIFT(KC_EQUAL), KC_7, KC_8, KC_9, KC_MINS,   KC_HOME, KC_PGDN, KC_PGUP, KC_END,   KC_NO, \
          SHIFT(KC_8),     KC_4, KC_5, KC_6, KC_SLSH,   KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, KC_NO, \
-         KC_0,            KC_1, KC_2, KC_3, KC_DOT,    KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R,  KC_FN7, \
+         KC_0,            KC_1, KC_2, KC_3, KC_DOT,    KC_NO, KC_NO, KC_DEL, KC_NO,  KC_FN7, \
          KC_EQUAL, KC_DOT, KC_FN3, KC_FN1, KC_FN4, KC_FN5, KC_LALT,     \
          KC_SPC, KC_FN0, KC_FN2, KC_QUOT, KC_ENT)
   
@@ -32,7 +32,6 @@ const uint16_t PROGMEM fn_actions[] = {
   [0] = ACTION_LAYER_TAP_KEY(1, KC_BSPC),
   [1] = ACTION_LAYER_MOMENTARY(2),     // toggle for Fn2 overlay
   [2] = ACTION_LAYER_TAP_KEY(2, KC_MINS),
-//  [2] = ACTION_LAYER_MOMENTARY(2),     // toggle for Fn2 overlay
   [3] = ACTION_MODS_TAP_KEY(MOD_LGUI, KC_TAB),
   [4] = ACTION_MODS_ONESHOT(MOD_LSFT),
   [5] = ACTION_MODS_TAP_KEY(MOD_LCTL, KC_ESC),
