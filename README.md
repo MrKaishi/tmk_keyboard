@@ -1,9 +1,22 @@
 TMK Keyboard Firmware Collection
 ================================
-This is a keyboard firmware with some useful features for Atmel AVR controller.
 
-Source code is available here: <http://github.com/tmk/tmk_keyboard>
+This is the [Atreus](https://atreus.technomancy.us) fork of the
+[TMK](https://github.com/tmk/tmk_keyboard) keyboard firmware.
 
+In particular, take a look at the `keyboard/atreus` directory and its
+[readme](https://github.com/technomancy/tmk_keyboard/blob/atreus/keyboard/atreus/README.md).
+
+Quick Start
+-----------
+
+Install `gcc-avr` and `avrdude`.
+
+    $ cd keyboard/atreus
+    $ make upload KEYMAP=qwerty USB=/dev/ttyACM0
+    # hit the reset key on your keyboard
+
+See `keyboard/atreus/README.md` for details.
 
 Features
 --------

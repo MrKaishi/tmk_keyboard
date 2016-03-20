@@ -146,3 +146,7 @@ upload: build
 include $(TOP_DIR)/protocol/lufa.mk
 include $(TOP_DIR)/common.mk
 include $(TOP_DIR)/rules.mk
+
+udev:
+	cp a-star.rules /etc/udev/rules.d/
+

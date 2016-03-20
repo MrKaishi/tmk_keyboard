@@ -1,9 +1,20 @@
 #include "keymap_common.h"
 
-/* The default Atreus layout. First layer is normal keys, second
-   (momentary fn layer) is numbers, most punctuation, and
-   arrows. Third (modal, persistent) layer is function keys and other
-   rarely-used keys. */
+// This is the "classic" layout, which has the arrow keys on L2
+// instead of on the fn layer. However, it has no characters which
+// require both shift and fn to be inserted, unlike the newer default.
+
+//    !     @     {     }     |       ||     pgup    7     8     9    *
+//    #     $     (     )     `       ||     pgdn    4     5     6    +
+//    %     ^     [     ]     ~       ||       &     1     2     3    \
+//   L2  insert super shift bksp ctrl || alt space   fn    .     0    =
+
+// L2 has the arrows:
+
+//  insert home    ↑    end  pgup     ||       ↑     F7    F8    F9   F10
+//    del   ←      ↓     →   pgdn     ||       ↓     F4    F5    F6   F11
+//                                    ||             F1    F2    F3   F12
+//              super shift bksp ctrl || alt space   L0             reset
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* 0: mostly letters */
@@ -13,7 +24,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          KC_ESC, KC_TAB, KC_LGUI, KC_LSFT, KC_BSPC, KC_LCTL, KC_LALT,     \
          KC_SPC, KC_FN0, KC_MINS, KC_QUOT, KC_ENT),                     \
   /* 1: punctuation and numbers */
-  FN_ARROW_LAYER,                                     \
+  FN_LAYER,                                     \
   /* 2: arrows and function keys */
   LAYER_TWO
 };
