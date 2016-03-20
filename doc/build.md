@@ -43,7 +43,8 @@ Build firmware using GNU `make` command. You'll see `<project>_<variant>.hex` fi
     make -f Makefile.<variant> clean
     make -f Makefile.<variant>
 
-
+#### Getting 0xc0000142 error from avr-gcc.exe ?
+Try replacing this file into http://www.madwizard.org/download/electronics/msys-1.0-vista64.zip in the WinAVR install in utils\bin
 
 
 Program Controller
